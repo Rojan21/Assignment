@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: rgb(23, 23, 25);
+  padding: 5rem;
+}
+
+.grid {
+  width: 100%;
+  height: 80rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 10rem repeat(2, 1fr) 10rem;
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+
+.featured {
+  grid-area: 2/ 1 / span 2 / span 2;
+}
+
+.featured video {
+  width: 100%;
+  border-radius: 2rem;
+  margin-bottom: 8rem;
+}
+.head {
+  grid-area: 1/1 / span 1 / span 3;
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.vedio1 {
+  grid-area: 2/3;
+}
+.vedio2 {
+  grid-area: 2/ 4;
+}
+.vedio3 {
+  grid-area: 3/ 3;
+}
+.vedio4 {
+  grid-area: 3/ 4;
+}
+
+.smallvideos {
+  width: 100%;
+  border-radius: 2rem;
+}
+.textbox {
+  margin-top: 2rem;
+}
+
+.textbox * {
+  margin: 1rem;
+}
+.textbox h2 {
+  font-size: 2rem;
+  color: rgb(207, 0, 0);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.textbox p {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    width: 100%;
+    height: 150rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem repeat(2, 1fr) 10rem 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+  .featured {
+    grid-area: 2/ 1 / span 1 / span 2;
+  }
+  .featured video {
+    width: 100%;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+  .vedio1 {
+    grid-area: 3/1;
+  }
+  .vedio2 {
+    grid-area: 3/ 2;
+  }
+  .vedio3 {
+    grid-area: 4/ 1;
+  }
+  .vedio4 {
+    grid-area: 4/ 2;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    width: 100%;
+    height: auto;
+    background-color: rgb(23, 23, 25);
+    padding: 0;
+  }
+
+  .grid {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    grid-gap: 2rem;
+    padding: 1rem;
+  }
+}
